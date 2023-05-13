@@ -1,0 +1,30 @@
+HTML {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: avenir-roman, sans-serif;
+}
+a {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 479px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  body {
+    font-size: 14px;
+  }
+}
