@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": 1001,
+      "name": "Alice Jones",
+      "email": "alice.jones@example.com",
+      "status": "active",
+      "role":"admin",
+      "login_time": "2023-05-14T08:30:00Z"
+    },
+    {
+      "id": 1002,
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "status": "active",
+      "role":"admin",
+      "login_time": "2023-05-14T10:45:00Z"
+    },
+    {
+      "id": 1003,
+      "name": "Charlie Brown",
+      "email": "charlie.brown@example.com",
+      "status": "invited",
+      "role":"admin",
+      "login_time": null
+    },
+    {
+      "id": 1004,
+      "name": "David Kim",
+      "email": "david.kim@example.com",
+      "status": "active",
+      "role":"admin",
+      "login_time": "2023-05-14T11:20:00Z"
+    },
+    {
+      "id": 1008,
+      "name": "Henry Park",
+      "email": "henry.park@example.com",
+      "status": "active",
+      "role":"admin",
+      "login_time": "2023-05-14T09:55:00Z"
+    },
+    {
+      "id": 1009,
+      "name": "Isabella Wong",
+      "email": "isabella.wong@example.com",
+      "status": "active",
+      "role":"admin",
+      "login_time": "2023-05-14T13:00:00Z"
+    },
+    {
+      "id": 1010,
+      "name": "Jackie Chan",
+      "email": "jackie.chan@example.com",
+      "status": "invited",
+      "role":"admin",
+      "login_time": null
+    },
+    {
+      "id": 1011,
+      "name": "Kevin Johnson",
+      "email": "kevin.johnson@example.com",
+      "status": "active",
+      "role":"admin",
+      "login_time": "2023-05-14T12:30:00Z"
+    },
+    {
+      "id": 1012,
+      "name": "Lily Chen",
+      "email": "lily.chen@example.com",
+      "status": "active",
+      "role":"admin",
+      "login_time": "2023-05-14T11:50:00Z"
+    },
+    {
+      "id": 1013,
+      "name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "status": "invited",
+      "role":"admin",
+      "login_time": null
+    },
+    {
+      "name": "Hitesh Wadhwani",
+      "email": "hiteshwadhwani1403@gmail.com",
+      "role": "admin",
+      "status": "active",
+      "id": 1014
+    }
+  ]
+}
