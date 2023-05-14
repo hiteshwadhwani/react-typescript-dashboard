@@ -6,6 +6,9 @@ import MenuBar from "./MenuBar";
 import { toast } from "react-hot-toast";
 import UpdateUserModal from "./UpdateUserModal";
 import CreateUserModal from "./CreateuserModal";
+import Papa from "papaparse";
+import CsvDownloadButton from 'react-json-to-csv'
+
 
 const items_per_page = 5;
 
@@ -76,6 +79,26 @@ const Home = () => {
     toast.success("updated");
   };
 
+  const downloadCSV = async () => {
+    try {
+      const res = await axios.get("http://localhost:8000/users");
+      const csv = Papa.parse(res.data);
+      const blob = new Blob([csv.toString()], {
+        type: "text/csv;charset=utf-8;",
+      });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", "data.csv");
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <CreateUserModal show={createShow} setShow={setCreateShow} />
@@ -94,9 +117,17 @@ const Home = () => {
                   Manage your team members and their account permissions here
                 </div>
               </div>
-              <button onClick={() => setCreateShow(true)} className="bg-blue-500 px-4 py-2 rounded-md border-transparent hover:bg-blue-400">
+              <div>
+              <button
+                onClick={() => setCreateShow(true)}
+                className="bg-blue-500 px-4 py-2 rounded-md border-transparent hover:bg-blue-400 mr-2"
+              >
                 create user
               </button>
+              <CsvDownloadButton className="bg-green-500 px-4 py-2 rounded-md border-transparent hover:bg-blue-400" data={data} />
+
+              </div>
+              
             </div>
           </div>
 
